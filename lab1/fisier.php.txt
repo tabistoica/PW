@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<div class="container">
+    <form method="post">
+        <input class="textbox" type="text" name="id" placeholder="Introduceti id">
+        <input class="textbox" type="text" name="nume_produs" placeholder="Introduceti nume produs">
+        <input class="textbox" type="text" name="stoc" placeholder="Introduceti stoc">
+        <input class="textbox" type="text" name="pret_bucata" placeholder="Introduceti pret bucata">
+        <input class="button" type="submit" name="sub" value="OK">
+    </form>
+</div>
+
+
+<?php
+
+$conn=mysqli_connect("localhost","root","","MAGAZIN") or die("Eroare!");
+
+if(isset($_POST['sub'])){
+    $id=$_POST['id'];
+    $nume_produs=$_POST['nume_produs'];
+    $stoc=$_POST['stoc'];
+    $pret_bucata=$_POST['pret_bucata'];
+
+    $sql="insert into PRODUSE values($id,'$nume_produs','$stoc',$pret_bucata)";
+    $ok=false;
+        if(mysqli_query($conn,$sql,MYSQLI_STORE_RESULT)){
+            $ok=true;
+        }
+        else{
+            $ok=false;
+        }
+    if($ok){
+        echo "<center><b>INSERT SUCCESSFUL!</b><center>";
+    }
+    else{
+        echo "<center><b>INSERT UNSUCCESSFUL!</b><center>";
+    }
+}
+
+?>
+
+</html>

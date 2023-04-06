@@ -1,0 +1,32 @@
+<html>
+<head>
+<link href="1.css" rel="stylesheet" type="text/css">
+<title>CV</title>
+</head>
+<body>
+<div class="container">
+<div class="div1">
+ <table align="left">
+ <tr>
+ <td><img src="image.jpg" width="100px" height="90px"></td>
+ <td>Deatcu Laura</td>
+ </tr>
+ </table>
+</div>
+<div class="div2">
+<br><br>
+<table align="center" height="1000px">
+<!--Introduceti in cadrul tabelului urmatoarele:
+1.Date personale - text formatat (bold, italic, underline, de
+diferite culori;
+2.Studii - tabel care sa contina studiile avute si un link catre
+pagina facultatii absolvite;
+3.Competente profesionale - Lista ordonata;
+4.Competente lingvistice - Lista ordonata;
+5.Hobby-uri - Lista neordonata.
+-->
+</table>
+</div>
+</div>
+</body>
+</html> 

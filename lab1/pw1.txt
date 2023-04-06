@@ -1,0 +1,24 @@
+Structura de baza a unui document HTML este urmatoarea:
+
+<HTML>
+<HEAD>
+<TITLE>
+ Textul din aceasta sectiune va fi afisat pe bara de titlu a
+ ferestrei browserului
+</TITLE>
+</HEAD>
+<BODY>
+ Textul din aceasta sectiune reprezinta continutul paginii Web:
+ text,tabele,liste,imagini,etc.
+</BODY>
+</HTML> 
+
+background pag.3
+formatare text pag.4
+hyperlinkuri pag.7
+liste pag.8
+tabele pag.10
+butoane radio si checkbox pag.18
+div si span pag.21
+css pag.22
+teme pag.29
