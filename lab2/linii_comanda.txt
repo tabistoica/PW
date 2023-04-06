@@ -1,0 +1,61 @@
+mysql> create database magazin;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use magazin;
+Database changed
+mysql> create table produse(
+    -> id integer primary key,
+    -> nume_produs varchar(14),
+    -> pret double,
+    -> cantitate integer
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> show tables
+    -> ;
++-------------------+
+| Tables_in_magazin |
++-------------------+
+| produse           |
++-------------------+
+1 row in set (0.01 sec)
+
+mysql> describe produse
+    -> ;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| id          | int         | NO   | PRI | NULL    |       |
+| nume_produs | varchar(14) | YES  |     | NULL    |       |
+| pret        | double      | YES  |     | NULL    |       |
+| cantitate   | int         | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> insert into produse set id="1", nume_produs="cafea", pret="25.99", cantitate="50";
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from produse
+    -> ;
++----+-------------+-------+-----------+
+| id | nume_produs | pret  | cantitate |
++----+-------------+-------+-----------+
+|  1 | cafea       | 25.99 |        50 |
++----+-------------+-------+-----------+
+1 row in set (0.00 sec)
+
+mysql> insert into produse set id="2", nume_produs="zahar", pret="3.10", cantitate="30";
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into produse set id="3", nume_produs="lapte", pret="4.99", cantitate="15";
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from produse;
++----+-------------+-------+-----------+
+| id | nume_produs | pret  | cantitate |
++----+-------------+-------+-----------+
+|  1 | cafea       | 25.99 |        50 |
+|  2 | zahar       |   3.1 |        30 |
+|  3 | lapte       |  4.99 |        15 |
++----+-------------+-------+-----------+
+3 rows in set (0.00 sec)

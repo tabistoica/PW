@@ -1,0 +1,58 @@
+mysql> create database evidenta;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> use evidenta;
+Database changed
+mysql> create table studenti(
+    -> id integer primary key auto_increment,
+    -> nume varchar(14),
+    -> prenume varchar(14),
+    -> grupa integer,
+    -> nota1 integer,
+    -> nota2 integer,
+    -> media double
+    -> );
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> show tables
+    -> ;
++--------------------+
+| Tables_in_evidenta |
++--------------------+
+| studenti           |
++--------------------+
+1 row in set (0.01 sec)
+
+mysql> describe studenti
+    -> ;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| id      | int         | NO   | PRI | NULL    | auto_increment |
+| nume    | varchar(14) | YES  |     | NULL    |                |
+| prenume | varchar(14) | YES  |     | NULL    |                |
+| grupa   | int         | YES  |     | NULL    |                |
+| nota1   | int         | YES  |     | NULL    |                |
+| nota2   | int         | YES  |     | NULL    |                |
+| media   | double      | YES  |     | NULL    |                |
++---------+-------------+------+-----+---------+----------------+
+7 rows in set (0.01 sec)
+
+mysql> insert into studenti set nume="Popescu", prenume="Alina", grupa="3", nota1="8", nota2="9";
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into studenti set nume="Bun", prenume="George", grupa="2", nota1="10", nota2="7";
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into studenti set nume="Gigi", prenume="Elena", grupa="1", nota1="6", nota2="5";
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from studenti;
++----+---------+---------+-------+-------+-------+-------+
+| id | nume    | prenume | grupa | nota1 | nota2 | media |
++----+---------+---------+-------+-------+-------+-------+
+|  1 | Popescu | Alina   |     3 |     8 |     9 |  NULL |
+|  2 | Bun     | George  |     2 |    10 |     7 |  NULL |
+|  3 | Gigi    | Elena   |     1 |     6 |     5 |  NULL |
++----+---------+---------+-------+-------+-------+-------+
+3 rows in set (0.00 sec)

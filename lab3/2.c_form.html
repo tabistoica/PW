@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+	<title>Form</title>
+	<style>
+	body{
+	background-image: url("back.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+	.division{
+	align-items: center;
+  	border-radius: 5px;
+	background: rgba(173,216,230,0.3);
+	padding: 150px;
+    	top: 50%;
+    	left: 50%;
+	}
+	.table{
+	border-collapse: collapse;
+    	margin-left: auto;
+	margin-right: auto;
+	}
+	.button{
+    	border: 2px solid black;
+    	height: 40px;
+    	width: 300px;
+    	font-size: 1.2em;
+    	text-align: center;
+	}
+	input[type=text], select {
+  	width: 100%;
+  	padding: 12px 20px;
+  	margin: 8px 0;
+  	display: inline-block;
+  	border: 1px solid #ccc;
+  	border-radius: 4px;
+  	box-sizing: border-box;
+	}	
+	</style>
+</head>
+<body>
+<div class="division">
+<table class="table">
+		<tr>
+		    <td>
+			<center>
+			<form method="POST" action="http://localhost/tema3pw/cauta.php">
+			Media:<input type="text" name="media" size="10"><br>
+			<input type="SUBMIT" value="Cauta" >
+			<input type="RESET" value="Reset" >
+			</form>
+			</center>
+		    </td>
+		</tr>
+                <tr>
+                    <td>
+                        <form action="http://localhost/tema3pw/actualizare.php" method="post">
+                        <input class="button" type="submit" value="Actualizare medie" name="button_medie">
+                        </form>
+                    </td>
+		</tr>
+		<tr>
+                    <td>
+                        <form action="http://localhost/tema3pw/afisare.php" method="post">
+                        <input class="button" type="submit" value="Afisare tabel" name="button_afisare">
+                        </form>
+                    </td>
+		</tr>
+		<tr>
+                    <td>
+                        <form action="http://localhost/tema3pw/delete.php" method="post">
+                        <input class="button" type="submit" value="Stergere" name="button_delete">
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form action="http://localhost/tema3pw/insert.php" method="post">
+                        <input class="button" type="submit" value="Inserare student" name="button_insert">
+                        </form>
+                    </td>
+		</tr>
+		<tr>
+                    <td>
+                        <form action="http://localhost/tema3pw/restante.php" method="post">
+                        <input class="button" type="submit" value="Afisare restantieri" name="button_restante"> 
+                        </form>
+                    </td>
+                </tr>
+</table>
+</div>
+</body>
+</html> 
